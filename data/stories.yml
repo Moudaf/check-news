@@ -1,0 +1,175 @@
+version: "3.1"
+
+stories:
+- story: story_info_ok_1
+  steps:
+  - intent: verification_info_1
+  - action: action_verification_info_1
+  - intent: affirmatif
+    entities:
+    - info_1: "oui"
+  - action: action_verification_info_2
+  - intent: affirmatif
+    entities:
+    - info_2: "oui"
+  - action: action_verification_info_3
+  - intent: affirmatif
+    entities:
+    - info_3: "oui"
+  - action: action_verification_info_4
+  - intent: affirmatif
+    entities:
+    - info_4: "oui"
+  - action: utter_info_ok
+
+- story: story_info_pas_ok_1
+  steps:
+  - intent: verification_info_1
+  - action: action_verification_info_1
+  - intent: affirmatif
+    entities:
+    - info_1: "oui"
+  - action: action_verification_info_2
+  - intent: affirmatif
+    entities:
+    - info_2: "oui"
+  - action: action_verification_info_3
+  - intent: affirmatif
+    entities:
+    - info_3: "oui"
+  - action: action_verification_info_4
+  - intent: negatif
+    entities:
+    - info_4: "non"
+  - action: utter_info_pas_ok
+
+- story: story_info_pas_ok_2
+  steps:
+  - intent: verification_info_1
+  - action: action_verification_info_1
+  - intent: negatif
+    entities:
+    - info_1: "non"
+  - action: action_verification_info_5
+  - intent: negatif
+    entities:
+    - info_5: "non"
+  - action: action_verification_info_7
+  - intent: negatif
+    entities:
+    - info_7: "non"
+  - action: action_verification_info_9
+  - intent: negatif
+    entities:
+    - info_9: "non"
+  - action: utter_info_pas_ok
+
+- story: story_info_ok_2
+  steps:
+  - intent: verification_info_1
+  - action: action_verification_info_1
+  - intent: negatif
+    entities:
+    - info_1: "non"
+  - action: action_verification_info_5
+  - intent: negatif
+    entities:
+    - info_5: "non"
+  - action: action_verification_info_7
+  - intent: negatif
+    entities:
+    - info_7: "non"
+  - action: action_verification_info_9
+  - intent: affirmatif
+    entities:
+    - info_9: "oui"
+  - action: action_verification_info_10
+  - intent: negatif
+    entities:
+    - info_10: "non"
+  - action: utter_info_ok
+
+- story: story_info_pas_ok_3
+  steps:
+  - intent: verification_info_1
+  - action: action_verification_info_1
+  - intent: negatif
+    entities:
+    - info_1: "non"
+  - action: action_verification_info_5
+  - intent: negatif
+    entities:
+    - info_5: "non"
+  - action: action_verification_info_7
+  - intent: negatif
+    entities:
+    - info_7: "non"
+  - action: action_verification_info_9
+  - intent: affirmatif
+    entities:
+    - info_9: "oui"
+  - action: action_verification_info_10
+  - intent: affirmatif
+    entities:
+    - info_10: "oui"
+  - action: utter_info_pas_ok
+
+# - story: story_info_pas_ok_4
+#   steps:
+#   - intent: verification_info_1
+#   - action: action_verification_info_1
+#   - intent: negatif
+#     entities:
+#     - info_1: "non"
+#   - action: action_verification_info_5
+#   - intent: affirmatif
+#     entities:
+#     - info_5: "non"
+#   - action: action_verification_info_7
+#   - intent: affirmatif
+#     entities:
+#     - info_7: "oui"
+#   - action: action_verification_info_8
+#   - intent: negatif
+#     entities:
+#     - info_9: "non"
+#   - action: utter_info_pas_ok
+
+- story: story_info_pas_ok_5
+  steps:
+  - intent: verification_info_1
+  - action: action_verification_info_1
+  - intent: negatif
+    entities:
+    - info_1: "non"
+  - action: action_verification_info_5
+  - intent: negatif
+    entities:
+    - info_5: "non"
+  - action: action_verification_info_7
+  - intent: negatif
+    entities:
+    - info_7: "non"
+  - action: action_verification_info_9
+  - intent: affirmatif
+    entities:
+    - info_9: "oui"
+  - action: action_verification_info_10
+  - intent: affirmatif
+    entities:
+    - info_10: "oui"
+  - action: utter_info_pas_ok
+
+- story: story_verification_info_2_affirmatif
+  steps:
+  - intent: verification_info_1
+  - action: action_verification_info_1
+  - intent: negatif
+    entities:
+    - info_1: "non"
+  - action: action_verification_info_5
+  - intent: affirmatif
+    entities:
+    - info_5: "oui"
+  - action: action_verification_info_6
+

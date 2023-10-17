@@ -1,0 +1,16 @@
+{
+  "lookup": {
+    "eJyLrq6NBQAEOAGx": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohvSg1taS2NhYA6dwbhQ==": "utter_greet",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohvSg1taSWgBmlJSWpRfEQpbhMiAUAQvc0lw==": "action_listen",
+    "eJydjkEKwCAMBL+SB/QFfqUUEYklUGOJ0Yv494r2XuhtB4Zh99Y3aLdgtc4rJTbQ1rDsIhp44aKsyMMtGWU4xAPVwCmI2j8aRRXFLvVf4eMFcUgS3XQqCgXyE3o/Hs7oVlw=": "utter_ask_organism",
+    "eJydjksKgDAMBa/SA3iCXkWkhJJK0KaSRjfFu1ta9352b2AY3ljOwZRN8HDglRJbU/pwDBGtuWGlrMjV3TNKdYgrqjWzIOr50NhVUVxX/xUeXhCHJBGac6BQIN/g3THIi0syA1OOX9rTBT44ekY=": "action_listen",
+    "eJytjtEJgDAMBVfpAE7QVURKkChBm0oa9aN0d4sKflbEvxwcl9em3Ji0CG4OeqXA1qTrcAwerblhpqjIxV0jSnGIC6o1oyBqrjRWVRR3qd8KlRXEQxAPp7Oh0ED9Ce+GQZxckBGYov+vXZk8cdifr7k7AN18l4E=": "action_ask_official_website",
+    "eJytjsEJwzAMRVfxAJ3Aq5Qi1CAHkVgOspIcTHavcQo9OpTc9OHx9J7leLiyKG2Ag3ES78p5gGAk775j5mwklV0zaWVY6jTvRiWyo+NYzUjhRP8zdCpYQtKIjdlIOfDQxrUwzBMkHVE4x/vcneRJ0v77es3VQkMNYJxhp3dmo6759QE9oLpa": "action_listen",
+    "eJytjsEJwzAMRVfxAJ3Aq5Ri1CAHkVguspIcjHevcQI9lOJQctOHx9O753Iz+SW4OhiUIluT98MxBLTmGDMlRa7sklAqQ1ynWjMKopaOY1FFcTv6n6FTQeyjBGjMikKehjbOhUGaXJQRmFK4zt1Jnjhun6/nXC3U1wCC2W34TKR4jflX5de38ngDanLYpg==": "action_ask_information_in_website",
+    "eJytkGEKgzAMha/SA+wEXmWMkkkqQZuONOqP4t1X6mADkZbhvzx4fO8j97TdTHoJLhZ6pcCdSfthGTx25hMmioqcu3NEyR3iHLUzgyDqVmHMqih2r/5HqFgQuyAeSmdBIUd9CW1iEEcbZACm6K9jV5RHDut3tY1VRF0WIJjsis9IiteQzywPa+2iv38jPtc9Tjzep8b/Lw==": "action_listen",
+    "eJytklEKwyAQRK/iAXqCXKUUsWENS+Ja1k3yId69YgINlKCE/DkwvHnIPmN6qPhhWLTpBT11Km4PTcZBp/YwYRCg3J0DcO4g5SidGhhAUoUxiwDrrXqNULFAsp6dKZ0FGC32JbSJmTBqz4MhDO4+dkV5JL/+VttYRdRmATSTXuEdUOAe8pnl31q76PHfkM51L060nMJhNr2+z7YgKQ==": "action_confirm_reliable",
+    "eJytklEKgzAQRK+SA/QEXqWUsMpGFpNN2az6Id69QYUKrRjEvwwMbx5hn9P8MNNbcLDQKEWuzLQ+LEPAymzBU1Lk3O0TSu4Q56iVaQVR5xNGr4pi1+o1wokFsYsSYOkMKOSoWUKZGKTORmmBKYX72CfKHcfxu1rGWkRdFiDwdsQ6keI95CPLn7Vy0f2/ER/rXpwoOYXdbBm0iexIghX0BLX/Y3uEf30AindFEg==": "utter_information_reliable",
+    "eJytklEKgzAMhq/SA+wEXmWMEiWVYJuONOqDePcVHUzYxE58a+Dv93+E3Kf5Zqan4GChUYpcmWl9WIaAlXkPnpIi52yfUHKGOI9amVYQdT5g9Koodo2eIxxYELsoAZbMgEKOmmUoE4PU2SgtMKVwHftAueM4flrLWIuoywIE3o5YJ1K8hrxn+dVWLrrdG/G+7smKklPY1JZBm8iOJFhBT1D7H7bn8Oudbf/+3/B4AUh+a2k=": "action_listen"
+  }
+}

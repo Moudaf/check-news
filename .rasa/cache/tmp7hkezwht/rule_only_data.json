@@ -1,0 +1,9 @@
+{
+  "rule_only_slots": [
+    "info_3",
+    "info_1",
+    "info_2",
+    "info_4"
+  ],
+  "rule_only_loops": []
+}

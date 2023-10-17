@@ -1,0 +1,63 @@
+import rasa.shared.core.agent as agent
+import rasa.shared.core.domain as domain
+import rasa.shared.core.events as events
+import rasa.shared.nlu.training_data.schemas.data_schema as data_schema
+
+class VerificationAgent(agent.Agent):
+
+    def __init__(self):
+        super().__init__(
+            domain.Domain.from_yaml_file("domain.yml"),
+            training_data=data_schema.load_data("data/training_data.yml"),
+        )
+
+    def handle_message(self, message):
+        if message.intent == "vérification_information":
+            self.utter_message(
+                text="Cette information parle d'un organisme ?",
+                buttons=[
+                    {"text": "Oui", "value": "oui"},
+                    {"text": "Non", "value": "non"},
+                ],
+            )
+
+        if message.data["button"] == "oui":
+            self.utter_message(
+                text="Connaissez-vous cet organisme ?",
+                buttons=[
+                    {"text": "Oui", "value": "oui"},
+                    {"text": "Non", "value": "non"},
+                ],
+            )
+
+        if message.data["button"] == "oui":
+            self.utter_message(
+                text="Cet organisme a t'il un site web officiel ?",
+                buttons=[
+                    {"text": "Oui", "value": "oui"},
+                    {"text": "Non", "value": "non"},
+                ],
+            )
+
+        if message.data["button"] == "oui":
+            self.utter_message(
+                text="Cette information c'est trouve t'elle dans ce site ?",
+                buttons=[
+                    {"text": "Oui", "value": "oui"},
+                    {"text": "Non", "value": "non"},
+                ],
+            )
+
+        if message.data["button"] == "oui":
+            self.utter_message(
+                text="D'après ce qu'on a eu à chatter nous constatons que cette information est fiable"
+            )
+
+        else:
+            self.utter_message(
+                text="Cette information n'est pas fiable"
+            )
+
+
+if __name__ == "__main__":
+    VerificationAgent().train_and_serve()

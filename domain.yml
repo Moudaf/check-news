@@ -1,0 +1,180 @@
+version: "3.1"
+
+intents:
+  - saluer
+  - goodbye
+  - bot_challenge
+  - comprends_pas
+  - verification_information
+  - affirmatif
+  - negatif
+  - verification_info_1
+  - verification_info_2
+  - verification_info_3
+  - verification_info_4
+  - verification_info_5
+  - verification_info_6
+  - verification_info_7
+  - verification_info_8
+  - verification_info_9
+  - verification_info_10
+  - verification_info_11
+
+entities:
+  - info_sur_site
+  - connait_organisme
+  - site_web_organisme
+  - info_1
+  - info_2
+  - info_3
+  - info_4
+  - info_5
+  - info_6
+  - info_7
+  - info_8
+  - info_9
+  - info_10
+  - info_11
+
+slots:
+  info_sur_site:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: info_sur_site
+
+  connait_organisme:
+    type: text
+    mappings:
+      - type: from_text
+        entity: connait_organisme
+
+  site_web_organisme:
+    type: text
+    mappings:
+      - type: from_text
+        entity: site_web_organisme
+
+  info_1:
+    type: text
+    mappings:
+      - type: from_text
+        entity: info_1
+
+  info_2:
+    type: text
+    mappings:
+      - type: from_text
+        entity: info_2
+
+  info_3:
+    type: text
+    mappings:
+      - type: from_text
+        entity: info_3
+
+  info_4:
+    type: text
+    mappings:
+      - type: from_text
+        entity: info_4
+
+  info_5:
+    type: text
+    mappings:
+      - type: from_text
+        entity: info_5
+
+  info_6:
+    type: text
+    mappings:
+      - type: from_text
+        entity: info_6
+
+  info_7:
+    type: text
+    mappings:
+      - type: from_text
+        entity: info_7
+
+  info_8:
+    type: text
+    mappings:
+      - type: from_text
+        entity: info_8
+
+  info_9:
+    type: text
+    mappings:
+      - type: from_text
+        entity: info_9
+
+  info_10:
+    type: text
+    mappings:
+      - type: from_text
+        entity: info_10
+
+  info_11:
+    type: text
+    mappings:
+      - type: from_text
+        entity: info_11
+
+  # info_sur_site:
+  #   type: text
+  #   mappings:
+  #     - type: from_text
+  #       entity: info_sur_site
+
+responses:
+  utter_saluer:
+    - text: "Hé, Salut ! Je suis un chatbot de vérification d'info. As-tu une information à vérifier ?  Aller vas - y "
+      buttons:
+        - title: "vérifier la véracité d'une information"
+          payload: '/verification_info_1'
+
+  utter_goodbye:
+    - text: "Au revoir ! N'hésitez pas si vous avez d'autres questions."
+
+  utter_bot_challenge:
+    - text: "Je suis un robot"
+  
+  utter_info_ok: 
+    - text: "D'après notre conversation, **Vous pouvez CONSOMMER CET INFO**"
+
+  utter_info_pas_ok:
+    - text: "D'après notre conversation, **Cet INFO peut NE PAS ETRE FIABLE**"
+
+  utter_avis:
+    - text: "Devrez-vous consommer cette info?"
+
+actions:
+  - action_save_conversation
+  - action_verification_info_1
+  - action_verification_info_2
+  - action_verification_info_3
+  - action_verification_info_4
+  - action_verification_info_5
+  - action_verification_info_6
+  - action_verification_info_7
+  - action_verification_info_8
+  - action_verification_info_9
+  - action_verification_info_10
+  - action_verification_info_11
+## action je ne comprends pas ##
+  - action_verification_pas_1
+  - action_verification_pas_2
+  - action_verification_pas_3
+  - action_verification_pas_4
+  - action_verification_pas_5
+  - action_verification_pas_7
+  - action_verification_pas_8
+  - action_verification_pas_9
+  - action_verification_pas_10
+
+forms: {}
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,418 @@
+version: "3.1"
+
+rules:
+
+- rule: Save conversation
+  steps:
+  - action: action_save_conversation
+
+- rule: Trigger ActionVerificationInfo1
+  steps:
+  - intent: verification_info_1
+  - action: action_verification_info_1
+
+- rule: story_info_1_ok
+  steps:
+  - action: action_verification_info_1
+  - intent: affirmatif
+    entities:
+    - info_1: "oui"
+  - action: action_verification_info_2
+
+- rule: story_info_1_no
+  steps:
+  - action: action_verification_info_1
+  - intent: negatif
+    entities:
+    - info_1: "non"
+  - action: action_verification_info_5
+
+- rule: story_info_2_ok
+  steps:
+  - action: action_verification_info_2
+  - intent: affirmatif
+    entities:
+    - info_2: "oui"
+  - action: action_verification_info_3
+
+- rule: story_info_2_no
+  steps:
+  - action: action_verification_info_2
+  - intent: negatif
+    entities:
+    - info_2: "non"
+  - action: action_verification_info_11
+
+- rule: story_info_3_ok
+  steps:
+  - action: action_verification_info_3
+  - intent: affirmatif
+    entities:
+    - info_3: "oui"
+  - action: action_verification_info_4
+
+- rule: story_info_3_no
+  steps:
+  - action: action_verification_info_3
+  - intent: negatif
+    entities:
+    - info_3: "non"
+  - action: action_verification_info_7
+
+- rule: story_info_4_ok
+  steps:
+  - action: action_verification_info_4
+  - intent: affirmatif
+    entities:
+    - info_4: "oui"
+  - action: utter_info_ok
+
+- rule: story_info_4_no
+  steps:
+  - action: action_verification_info_4
+  - intent: negatif
+    entities:
+    - info_4: "non"
+  - action: utter_info_pas_ok
+
+- rule: story_info_5_ok
+  steps:
+  - action: action_verification_info_5
+  - intent: affirmatif
+    entities:
+    - info_5: "oui"
+  - action: action_verification_info_6
+
+- rule: story_info_5_no
+  steps:
+  - action: action_verification_info_5
+  - intent: negatif
+    entities:
+    - info_5: "non"
+  - action: action_verification_info_7
+
+- rule: story_info_6_ok
+  steps:
+  - action: action_verification_info_6
+  - intent: affirmatif
+    entities:
+    - info_6: "oui"
+  - action: action_verification_info_3
+
+- rule: story_info_7_ok
+  steps:
+  - action: action_verification_info_7
+  - intent: affirmatif
+    entities:
+    - info_7: "oui"
+  - action: action_verification_info_8
+
+- rule: story_info_7_no
+  steps:
+  - action: action_verification_info_7
+  - intent: negatif
+    entities:
+    - info_7: "non"
+  - action: action_verification_info_9
+
+- rule: story_info_8_ok
+  steps:
+  - action: action_verification_info_8
+  - intent: affirmatif
+    entities:
+    - info_8: "oui"
+  - action: action_verification_info_9
+
+- rule: story_info_8_no
+  steps:
+  - action: action_verification_info_8
+  - intent: negatif
+    entities:
+    - info_8: "non"
+  - action: utter_info_pas_ok
+
+- rule: story_info_9_ok
+  steps:
+  - action: action_verification_info_9
+  - intent: affirmatif
+    entities:
+    - info_9: "oui"
+  - action: action_verification_info_10
+
+- rule: story_info_9_no
+  steps:
+  - action: action_verification_info_9
+  - intent: negatif
+    entities:
+    - info_9: "non"
+  - action: utter_info_pas_ok
+
+- rule: story_info_10_ok
+  steps:
+  - action: action_verification_info_10
+  - intent: affirmatif
+    entities:
+    - info_10: "oui"
+  - action: utter_info_pas_ok
+
+- rule: story_info_10_no
+  steps:
+  - action: action_verification_info_10
+  - intent: negatif
+    entities:
+    - info_10: "non"
+  - action: utter_info_ok
+
+- rule: story_info_11_ok
+  steps:
+  - action: action_verification_info_11
+  - intent: affirmatif
+    entities:
+    - info_11: "oui"
+  - action: action_verification_info_3
+#######################################################################
+- rule: story_info_1_ok_pa
+  steps:
+  - action: action_verification_pas_1
+  - intent: affirmatif
+    entities:
+    - info_1: "oui"
+  - action: action_verification_info_2
+
+- rule: story_info_1_no_pa
+  steps:
+  - action: action_verification_pas_1
+  - intent: negatif
+    entities:
+    - info_1: "non"
+  - action: action_verification_info_5
+
+- rule: story_info_2_ok_pa
+  steps:
+  - action: action_verification_pas_2
+  - intent: affirmatif
+    entities:
+    - info_2: "oui"
+  - action: action_verification_info_3
+
+- rule: story_info_2_no_pa
+  steps:
+  - action: action_verification_pas_2
+  - intent: negatif
+    entities:
+    - info_2: "non"
+  - action: action_verification_info_11
+
+- rule: story_info_3_ok_pa
+  steps:
+  - action: action_verification_pas_3
+  - intent: affirmatif
+    entities:
+    - info_3: "oui"
+  - action: action_verification_info_4
+
+- rule: story_info_3_no_pa
+  steps:
+  - action: action_verification_pas_3
+  - intent: negatif
+    entities:
+    - info_3: "non"
+  - action: action_verification_info_7
+
+- rule: story_info_4_ok_pa
+  steps:
+  - action: action_verification_pas_4
+  - intent: affirmatif
+    entities:
+    - info_4: "oui"
+  - action: utter_info_ok
+
+- rule: story_info_4_no_pa
+  steps:
+  - action: action_verification_pas_4
+  - intent: negatif
+    entities:
+    - info_4: "non"
+  - action: utter_info_pas_ok
+
+- rule: story_info_5_ok_pa
+  steps:
+  - action: action_verification_pas_5
+  - intent: affirmatif
+    entities:
+    - info_5: "oui"
+  - action: action_verification_info_6
+
+- rule: story_info_5_no_pa
+  steps:
+  - action: action_verification_pas_5
+  - intent: negatif
+    entities:
+    - info_5: "non"
+  - action: action_verification_info_7
+
+- rule: story_info_7_ok_pa
+  steps:
+  - action: action_verification_pas_7
+  - intent: affirmatif
+    entities:
+    - info_7: "oui"
+  - action: action_verification_info_8
+
+- rule: story_info_7_no_pa
+  steps:
+  - action: action_verification_pas_7
+  - intent: negatif
+    entities:
+    - info_7: "non"
+  - action: action_verification_info_9
+
+- rule: story_info_8_ok_pa
+  steps:
+  - action: action_verification_pas_8
+  - intent: affirmatif
+    entities:
+    - info_8: "oui"
+  - action: action_verification_info_9
+
+- rule: story_info_8_no_pa
+  steps:
+  - action: action_verification_pas_8
+  - intent: negatif
+    entities:
+    - info_8: "non"
+  - action: utter_info_pas_ok
+
+- rule: story_info_9_ok_pa
+  steps:
+  - action: action_verification_pas_9
+  - intent: affirmatif
+    entities:
+    - info_9: "oui"
+  - action: action_verification_info_10
+
+- rule: story_info_9_no_pa
+  steps:
+  - action: action_verification_pas_9
+  - intent: negatif
+    entities:
+    - info_9: "non"
+  - action: utter_info_pas_ok
+
+- rule: story_info_10_ok_pa
+  steps:
+  - action: action_verification_pas_10
+  - intent: affirmatif
+    entities:
+    - info_10: "oui"
+  - action: utter_info_pas_ok
+
+- rule: story_info_10_no_pa
+  steps:
+  - action: action_verification_pas_10
+  - intent: negatif
+    entities:
+    - info_10: "non"
+  - action: utter_info_ok
+#######################################################################
+#################################### debut je ne comprends pas #########################
+- rule: pas_1
+  steps:
+  - action: action_verification_info_1
+  - intent: comprends_pas
+    entities:
+    - info_1: "pas"
+  - action: action_verification_pas_1
+
+- rule: pas_2
+  steps:
+  - action: action_verification_info_2
+  - intent: comprends_pas
+    entities:
+    - info_2: "pas"
+  - action: action_verification_pas_2
+
+- rule: pas_3
+  steps:
+  - action: action_verification_info_3
+  - intent: comprends_pas
+    entities:
+    - info_3: "pas"
+  - action: action_verification_pas_3
+
+- rule: pas_4
+  steps:
+  - action: action_verification_info_4
+  - intent: comprends_pas
+    entities:
+    - info_4: "pas"
+  - action: action_verification_pas_4
+
+- rule: pas_5
+  steps:
+  - action: action_verification_info_5
+  - intent: comprends_pas
+    entities:
+    - info_5: "pas"
+  - action: action_verification_pas_5
+
+- rule: pas_7
+  steps:
+  - action: action_verification_info_7
+  - intent: comprends_pas
+    entities:
+    - info_7: "pas"
+  - action: action_verification_pas_7
+
+- rule: pas_8
+  steps:
+  - action: action_verification_info_8
+  - intent: comprends_pas
+    entities:
+    - info_8: "pas"
+  - action: action_verification_pas_8
+
+- rule: pas_9
+  steps:
+  - action: action_verification_info_9
+  - intent: comprends_pas
+    entities:
+    - info_9: "pas"
+  - action: action_verification_pas_9
+
+- rule: pas_10
+  steps:
+  - action: action_verification_info_10
+  - intent: comprends_pas
+    entities:
+    - info_10: "pas"
+  - action: action_verification_pas_10
+#################################### fin je ne comprends pas ###########################
+
+########## enregistrer la conversation #########
+- rule: enregistrer_conversation_1
+  steps:
+  - action: utter_info_ok
+  - action: action_save_conversation
+
+- rule: enregistrer_conversation_2
+  steps:
+  - action: utter_info_pas_ok
+  - action: action_save_conversation
+########## fin enregistrer la conversation ########
+
+- rule: Say welcome
+  steps:
+  - intent: saluer
+  - action: utter_saluer
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_bot_challenge
+
+- rule: Say bye bye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+

@@ -1,0 +1,56 @@
+version: "3.1"
+
+nlu:
+- intent: saluer
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: verification_information
+  examples: |
+    - vérification de l'information
+    - valider une info
+    - est-ce que cette info est vraie
+
+- intent: goodbye
+  examples: |
+    - bye
+    - aurevoir
+    - à plus
+    - merci
+  
+- intent: affirmatif
+  examples: |
+    - oui
+    - yes
+    - tout à fait
+    - bien sûr
+
+- intent: negatif
+  examples: |
+    - non
+    - no
+    - pas du tout
+
+- intent: comprends_pas
+  examples: |
+    - comprends pas
+    - pas compris
+  
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
