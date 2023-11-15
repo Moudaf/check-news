@@ -410,6 +410,31 @@ class ActionVerificationPas10(Action):
         )
 
         return [] 
+
+# import pandas as pd
+# from rasa.core.events import UserUttered
+
+# def save_conversation_to_excel(tracker, excel_file='conversation_data.xlsx'):
+#     conversation_data = []
+
+#     for event in tracker.events:
+#         if isinstance(event, UserUttered):
+#             user_utterance = {
+#                 'user': event.text,
+#                 'bot_responses': [e.text for e in event.metadata.get('utter_action', [])]
+#             }
+#             conversation_data.append(user_utterance)
+
+#     # Convertir la liste de dictionnaires en DataFrame pandas
+#     df = pd.DataFrame(conversation_data)
+
+#     # Enregistrer le DataFrame dans un fichier Excel
+#     df.to_excel(excel_file, index=False, sheet_name='Conversations')
+
+# # Exemple d'utilisation
+# # Appeler cette fonction à la fin de chaque interaction
+# save_conversation_to_excel(tracker)
+
     
 # class ActionVerificationInfo11(Action):
 

@@ -1,17 +1,6 @@
-# Utilisez une image Windows Server Core comme base
-# FROM mcr.microsoft.com/windows/servercore:ltsc2022
-# FROM nginx:alpine
-FROM rasa/rasa:3.0.0
-
-# Copiez votre projet Rasa dans le conteneur
-COPY . /app
-
-# Définissez le répertoire de travail
-WORKDIR /app
-
-# Installez Rasa et ses dépendances (adapté pour Windows)
-# RUN pip install -U pip
-# RUN pip install rasa
-
-# Exécutez votre chatbot Rasa
-CMD ["rasa", "run", "-m", "models", "--endpoints", "endpoints.yml"]
+FROM ubuntu:18.04
+ENTRYPOINT []
+RUN apt-get update && apt-get install -y python3 python3-pip && python3 -m pip install --no-cache --upgrade pip && pip3 install --no-cache rasa==3.1
+ADD . /app/
+RUN chmod +x /app/start_services.sh
+CMD /app/start_services.sh
